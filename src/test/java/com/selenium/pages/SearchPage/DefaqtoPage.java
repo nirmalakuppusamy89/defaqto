@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class DefaqtoPage extends BasePage {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SearchPage.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DefaqtoPage.class);
 
     private static final String HOME_PAGE_URL = "https://defaqto.com/";
 
