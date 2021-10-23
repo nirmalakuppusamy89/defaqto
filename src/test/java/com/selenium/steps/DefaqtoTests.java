@@ -9,8 +9,7 @@ import org.slf4j.LoggerFactory;
 
 public class DefaqtoTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SearchTests.class);
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(DefaqtoTests.class);
     private final DefaqtoPage defaqtoPage;
 
     public DefaqtoTests() {
@@ -22,11 +21,9 @@ public class DefaqtoTests {
     public void iAmOnTheDefaqtoWebsiteHomepage() {
         LOGGER.info("Opening the home page");
         defaqtoPage.goToHomePage();
-
-
     }
 
-    @When("I click on car insurance icon")
+    @When("I click on car insurance product")
     public void iClickCarInsuranceOption() {
         LOGGER.info("click the car insurance icon");
         defaqtoPage.navigateToCarInsuranceRatingsPage();
@@ -37,51 +34,44 @@ public class DefaqtoTests {
     public void iVerifyICanSeeTheStarRatingCompanies(int ratingNumber, String productType) {
 
         switch (productType) {
-
             case "car-insurance":
                 defaqtoPage.verifyCarInsuranceRatingPage(ratingNumber);
                 break;
-
             case "home-insurance":
                 defaqtoPage.verifyHomeInsuranceRatingPage(ratingNumber);
                 break;
             case "travel-insurance":
                 defaqtoPage.verifyTravelInsuranceRatingPage(ratingNumber);
                 break;
-
             case "credit-card":
                 defaqtoPage.verifyCreditCardRatingPage(ratingNumber);
                 break;
-
             case "current-account":
                 defaqtoPage.verifyCurrentAccountRatingPage(ratingNumber);
                 break;
-
         }
-
-
 
     }
 
-    @When("I click home insurance icon")
+    @When("I click home insurance product")
     public void iClickHomeInsuranceIcon() {
         defaqtoPage.clickHomeInsuranceIcon();
 
     }
 
-    @When("I click travel insurance icon")
+    @When("I click travel insurance product")
     public void iClickTravelInsuranceIcon() {
         defaqtoPage.clickTravelInsuranceIcon();
 
     }
 
-    @When("I click credit card icon")
+    @When("I click credit card product")
     public void iClickCreditCardIcon() {
         defaqtoPage.clickCreditCardIcon();
 
     }
 
-    @When("I click current account")
+    @When("I click current account product")
     public void iClickCurrentAccount() {
         defaqtoPage.clickCurrentAccount();
 

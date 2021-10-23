@@ -57,6 +57,8 @@ public class DefaqtoPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"list-container-4\"]/ul")
     private WebElement fourStarRatingList;
 
+    @FindBy(xpath = "//*[@id=\"list-container-3\"]/ul")
+    private WebElement threeStarRatingList;
 
 
     public DefaqtoPage() {
@@ -100,12 +102,10 @@ public class DefaqtoPage extends BasePage {
         wait.forElementToBeDisplayed(2, currentAccount, "current account icon");
         currentAccount.click();
 
-
     }
 
     public void hoverOverAllStarRatings() {
         wait.forElementToBeDisplayed(2, allStarRatings, "all star ratings");
-
 
     }
 
@@ -123,13 +123,19 @@ public class DefaqtoPage extends BasePage {
                 LOGGER.info("Verifying the 5 star rating companies size");
                 Assert.assertEquals(150, actualFiveStarRatedCompaniesSize);
                 break;
-
             case 4:
                 LOGGER.info("Getting the 4 star rating companies size "
                         + fourStarRatingList.findElements(By.xpath("li")).size());
                 int actualFourStarRatedCompaniesSize = fourStarRatingList.findElements(By.xpath("li")).size();
-                LOGGER.info("Verifying the 5 star rating companies size");
+                LOGGER.info("Verifying the 4 star rating companies size");
                 Assert.assertEquals(25, actualFourStarRatedCompaniesSize);
+                break;
+            case 3:
+                LOGGER.info("Getting the 3 star rating companies size "
+                        + threeStarRatingList.findElements(By.xpath("li")).size());
+                int actualThreeStarRatedCompaniesSize = threeStarRatingList.findElements(By.xpath("li")).size();
+                LOGGER.info("Verifying the 3 star rating companies size");
+                Assert.assertEquals(95, actualThreeStarRatedCompaniesSize);
                 break;
 
         }
@@ -150,13 +156,19 @@ public class DefaqtoPage extends BasePage {
                 LOGGER.info("Verifying the 5 star rating companies size");
                 Assert.assertEquals(151, actualFiveStarRatedCompaniesSize);
                 break;
-
             case 4:
                 LOGGER.info("Getting the 4 star rating companies size "
                         + fourStarRatingList.findElements(By.xpath("li")).size());
                 int actualFourStarRatedCompaniesSize = fourStarRatingList.findElements(By.xpath("li")).size();
-                LOGGER.info("Verifying the 5 star rating companies size");
+                LOGGER.info("Verifying the 4 star rating companies size");
                 Assert.assertEquals(49, actualFourStarRatedCompaniesSize);
+                break;
+            case 3:
+                LOGGER.info("Getting the 3 star rating companies size "
+                        + threeStarRatingList.findElements(By.xpath("li")).size());
+                int actualThreeStarRatedCompaniesSize = threeStarRatingList.findElements(By.xpath("li")).size();
+                LOGGER.info("Verifying the 3 star rating companies size");
+                Assert.assertEquals(111, actualThreeStarRatedCompaniesSize);
                 break;
 
         }
@@ -182,10 +194,16 @@ public class DefaqtoPage extends BasePage {
                 LOGGER.info("Getting the 4 star rating companies size "
                         + fourStarRatingList.findElements(By.xpath("li")).size());
                 int actualFourStarRatedCompaniesSize = fourStarRatingList.findElements(By.xpath("li")).size();
-                LOGGER.info("Verifying the 5 star rating companies size");
+                LOGGER.info("Verifying the 4 star rating companies size");
                 Assert.assertEquals(111, actualFourStarRatedCompaniesSize);
                 break;
-
+            case 3:
+                LOGGER.info("Getting the 3 star rating companies size "
+                        + threeStarRatingList.findElements(By.xpath("li")).size());
+                int actualThreeStarRatedCompaniesSize = threeStarRatingList.findElements(By.xpath("li")).size();
+                LOGGER.info("Verifying the 3 star rating companies size");
+                Assert.assertEquals(392, actualThreeStarRatedCompaniesSize);
+                break;
         }
 
     }
@@ -209,10 +227,16 @@ public class DefaqtoPage extends BasePage {
                 LOGGER.info("Getting the 4 star rating companies size "
                         + fourStarRatingList.findElements(By.xpath("li")).size());
                 int actualFourStarRatedCompaniesSize = fourStarRatingList.findElements(By.xpath("li")).size();
-                LOGGER.info("Verifying the 5 star rating companies size");
+                LOGGER.info("Verifying the 4 star rating companies size");
                 Assert.assertEquals(9, actualFourStarRatedCompaniesSize);
                 break;
-
+            case 3:
+                LOGGER.info("Getting the 3 star rating companies size "
+                        + threeStarRatingList.findElements(By.xpath("li")).size());
+                int actualThreeStarRatedCompaniesSize = threeStarRatingList.findElements(By.xpath("li")).size();
+                LOGGER.info("Verifying the 3 star rating companies size");
+                Assert.assertEquals(80, actualThreeStarRatedCompaniesSize);
+                break;
         }
 
     }
@@ -231,22 +255,22 @@ public class DefaqtoPage extends BasePage {
                 LOGGER.info("Verifying the 5 star rating companies size");
                 Assert.assertEquals(18, actualFiveStarRatedCompaniesSize);
                 break;
-
             case 4:
                 LOGGER.info("Getting the 4 star rating companies size "
                         + fourStarRatingList.findElements(By.xpath("li")).size());
                 int actualFourStarRatedCompaniesSize = fourStarRatingList.findElements(By.xpath("li")).size();
-                LOGGER.info("Verifying the 5 star rating companies size");
+                LOGGER.info("Verifying the 4 star rating companies size");
                 Assert.assertEquals(10, actualFourStarRatedCompaniesSize);
                 break;
-
+            case 3:
+                LOGGER.info("Getting the 3 star rating companies size "
+                        + threeStarRatingList.findElements(By.xpath("li")).size());
+                int actualThreeStarRatedCompaniesSize = threeStarRatingList.findElements(By.xpath("li")).size();
+                LOGGER.info("Verifying the 3 star rating companies size");
+                Assert.assertEquals(10, actualThreeStarRatedCompaniesSize);
+                break;
         }
 
     }
-
-
-
-
-
 
 }
